@@ -172,3 +172,10 @@ Route::get('/optimize-clear', function() {
     Artisan::call('optimize:clear');
     return 'View cache cleared';
 });
+
+// composer dump-autoload
+Route::get('/updateapp', function() {
+
+    exec('composer dump-autoload');
+    echo 'composer dump-autoload complete';
+});
